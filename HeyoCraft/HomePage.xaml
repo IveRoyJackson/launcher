@@ -1,0 +1,27 @@
+﻿<Page x:Class="HeyoCraft.HomePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:heyo="clr-namespace:Heyo.Controls;assembly=Heyo"
+             xmlns:local="clr-namespace:HeyoCraft"
+             xmlns:ay="clr-namespace:Ay.Framework.WPF.Controls;assembly=Ay.Framework.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800" Width="Auto">
+    <Grid VerticalAlignment="Bottom">
+        <StackPanel Margin="0"  HorizontalAlignment="Center" VerticalAlignment="Center">
+            <heyo:ImageSwitchViewer x:Name="viewer" Margin="16,0,0,8" Width="492" HorizontalAlignment="Left" RadioButtonStyle="{DynamicResource ResourceKey=RadioButtonStyle2}" Height="180" VerticalAlignment="Bottom" VerticalContentAlignment="Center">
+                <heyo:ImageSwitchViewer.ImageItems>
+                    <Image Source="Contents/bg/bg/BG.jpg" Stretch="UniformToFill"/>
+                    <Image Source="Resources/de.jpg" Stretch="UniformToFill"/>
+                </heyo:ImageSwitchViewer.ImageItems>
+            </heyo:ImageSwitchViewer>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <heyo:MaterialBoard Title="资源中心" Intruduction="在这里可以下载各种版本的Minecraft，有各种mod、资源包、光影、Forge、OptfineHD和服务端等各种资源(抱歉还不能用)" Margin="16" Width="230" Height="180" Background="#9900A1D1"/>
+                <heyo:MaterialBoard Title="多人游戏" Intruduction="寻找各种好玩的服务器，与小伙伴们一起游戏(抱歉还不能用)" Margin="16" Background="#996AD16F" Width="230" Height="180"/>
+                <heyo:MaterialBoard Title="教程问答" Intruduction="这里可以提问，还有许多教程(抱歉还不能用)" Margin="16" Background="#99F08B52" Width="230" Height="180"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

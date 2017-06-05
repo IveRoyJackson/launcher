@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B72ACFD-B0B9-4560-A0FD-FC304D0A016D}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>Heyo</RootNamespace>
+    <AssemblyName>Heyo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Controls">
+      <HintPath>..\HeyoCraft\lib\Microsoft.Expression.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing">
+      <HintPath>..\HeyoCraft\lib\Microsoft.Expression.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\AsyncWorker.cs" />
+    <Compile Include="Class\Data\Json.cs" />
+    <Compile Include="Class\Events\StringEventArgs.cs" />
+    <Compile Include="Class\Grain.cs" />
+    <Compile Include="Class\Helper\AeroHelper.cs" />
+    <Compile Include="Class\Helper\ByteHelper.cs" />
+    <Compile Include="Class\Helper\ColorHelper.cs" />
+    <Compile Include="Class\Helper\ComponentHelper.cs" />
+    <Compile Include="Class\Helper\DirectoryEx.cs" />
+    <Compile Include="Class\Helper\Encryption\MD5.cs" />
+    <Compile Include="Class\Helper\Encryption\SHA1.cs" />
+    <Compile Include="Class\Helper\FileHelper.cs" />
+    <Compile Include="Class\Helper\ImageHelper.cs" />
+    <Compile Include="Class\Helper\JsonHelper.cs" />
+    <Compile Include="Class\Helper\LogHelper.cs" />
+    <Compile Include="Class\Helper\MemoryHelper.cs" />
+    <Compile Include="Class\Helper\MFTScanner.cs" />
+    <Compile Include="Class\Helper\Network.cs" />
+    <Compile Include="Class\Helper\PermissionHelper.cs" />
+    <Compile Include="Class\Helper\RegHelper.cs" />
+    <Compile Include="Class\Helper\ShotsHeper.cs" />
+    <Compile Include="Class\Helper\SystemHelper.cs" />
+    <Compile Include="Class\Helper\TimeHelper.cs" />
+    <Compile Include="Class\Helper\Win32.cs" />
+    <Compile Include="Class\Helper\WindowStyleHelper.cs" />
+    <Compile Include="Class\Helper\ZIP\Checksums\Adler32.cs" />
+    <Compile Include="Class\Helper\ZIP\Checksums\Crc32.cs" />
+    <Compile Include="Class\Helper\ZIP\Checksums\IChecksum.cs" />
+    <Compile Include="Class\Helper\ZIP\Checksums\StrangeCrc.cs" />
+    <Compile Include="Class\Helper\ZIP\Core\FileSystemScanner.cs" />
+    <Compile Include="Class\Helper\ZIP\Core\INameTransform.cs" />
+    <Compile Include="Class\Helper\ZIP\Core\IScanFilter.cs" />
+    <Compile Include="Class\Helper\ZIP\Core\NameFilter.cs" />
+    <Compile Include="Class\Helper\ZIP\Core\PathFilter.cs" />
+    <Compile Include="Class\Helper\ZIP\Core\StreamUtils.cs" />
+    <Compile Include="Class\Helper\ZIP\Core\WindowsPathUtils.cs" />
+    <Compile Include="Class\Helper\ZIP\Encryption\PkzipClassic.cs" />
+    <Compile Include="Class\Helper\ZIP\Encryption\ZipAESStream.cs" />
+    <Compile Include="Class\Helper\ZIP\Encryption\ZipAESTransform.cs" />
+    <Compile Include="Class\Helper\ZIP\SharpZipBaseException.cs" />
+    <Compile Include="Class\Helper\ZIP\ZIP.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\Deflater.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\Inflater.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\FastZip.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\IEntryFactory.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\WindowsNameTransform.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipConstants.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipEntry.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipEntryFactory.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipException.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipExtraData.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipFile.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipHelperStream.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipInputStream.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipNameTransform.cs" />
+    <Compile Include="Class\Helper\ZIP\Zip\ZipOutputStream.cs" />
+    <Compile Include="Controls\ArcProgressBar.xaml.cs">
+      <DependentUpon>ArcProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Avatar.xaml.cs">
+      <DependentUpon>Avatar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BlurAnimationPanel.cs" />
+    <Compile Include="Controls\ButtonEx.xaml.cs">
+      <DependentUpon>ButtonEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClippingBorder.cs" />
+    <Compile Include="Controls\ColorBackground.cs" />
+    <Compile Include="Controls\CrossButton.xaml.cs">
+      <DependentUpon>CrossButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FloatingBar.xaml.cs">
+      <DependentUpon>FloatingBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GrainsBackground.cs" />
+    <Compile Include="Controls\IAnimationPanel.cs" />
+    <Compile Include="Controls\ImageRadioButton.cs" />
+    <Compile Include="Controls\ImageSwitchViewer.cs" />
+    <Compile Include="Controls\LabelEx.cs" />
+    <Compile Include="Controls\MaterialBoard.xaml.cs">
+      <DependentUpon>MaterialBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialButton.cs" />
+    <Compile Include="Controls\MaterialCard.cs" />
+    <Compile Include="Controls\MaterialFloatingBox.cs" />
+    <Compile Include="Controls\MaterialRipples.cs" />
+    <Compile Include="Controls\MaterialTextBox.xaml.cs">
+      <DependentUpon>MaterialTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MoveAnimationPanel.cs" />
+    <Compile Include="Controls\OpacityAnimationPanel.cs" />
+    <Compile Include="Controls\TextBoxEx.xaml.cs">
+      <DependentUpon>TextBoxEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DialogWindow.xaml.cs">
+      <DependentUpon>DialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowEntrance.cs" />
+    <Compile Include="WindowPlus.cs" />
+    <Compile Include="Pages\DialogPage.cs" />
+    <Page Include="Controls\ArcProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Avatar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonEx.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CrossButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FloatingBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MaterialBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MaterialTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TextBoxEx.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DialogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Minecraft.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

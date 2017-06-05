@@ -1,0 +1,44 @@
+﻿<control:AyWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:control="http://www.ayjs.net/controls"
+        xmlns:heyo="clr-namespace:Heyo.Controls;assembly=Heyo" x:Name="ayWindow"
+        x:Class="HeyoCraft.BaseWindow"
+        WindowStartupLocation="CenterScreen"
+        Title="HeyoCraft" Height="557" Width="907" 
+        SkinButtonVisibility="Visible" 
+        MaxButtonVisibility="Collapsed"
+        BorderThickness="0"
+        CornerRadius="3"
+        AyResizeMode="NoResize"
+        WindowIconVisibility="Collapsed"
+        TitleBarClickMode="2"
+        CloseIsHideWindow="False"
+        Icon="Resources/Logo.ico" 
+        WindowEntranceBackgroundMode="2"
+        ShadowMargin="20">
+    <control:AyWindow.Effect>
+        <DropShadowEffect BlurRadius="20" ShadowDepth="0" Opacity="0.15"/>
+    </control:AyWindow.Effect>
+
+    <Grid x:Name="mainGrid" Margin="0,-24,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="59"/>
+        </Grid.RowDefinitions>
+        <control:AyGaosiBackgroundLayer x:Name="backBlur" GaoSiRadius="{Binding GaoSiRadius, ElementName=ayWindow}" Grid.RowSpan="2"/>
+        <heyo:OpacityAnimationPanel x:Name="backOpPanel" AnimationSpeed="4" Grid.RowSpan="2">
+            <heyo:OpacityAnimationPanel.Function>
+                <PowerEase Power="2" EasingMode="EaseOut"/>
+            </heyo:OpacityAnimationPanel.Function>
+            <heyo:OpacityAnimationPanel.Background>
+                <ImageBrush/>
+            </heyo:OpacityAnimationPanel.Background>
+        </heyo:OpacityAnimationPanel>
+
+        <Grid x:Name="backWhite" Background="{DynamicResource Background4}" Grid.RowSpan="2">
+            <Border Background="#02000000" MouseDown="Border_MouseDown"  Height="26" VerticalAlignment="Top"/>
+            <Canvas x:Name="canvas1" Margin="0,26,0,0"/>
+        </Grid>
+    </Grid>
+</control:AyWindow>

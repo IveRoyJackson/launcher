@@ -1,0 +1,58 @@
+﻿<local:DialogPage x:Class="HeyoCraft.Pages.YesOrNoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Heyo.Pages;assembly=Heyo"
+      xmlns:control="clr-namespace:Heyo.Controls;assembly=Heyo"
+      mc:Ignorable="d" 
+      Title="YesOrNoPage" VerticalAlignment="Center">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+        <StackPanel>
+            <Grid Background="White">
+                <StackPanel>
+                    <Label UseLayoutRounding="True" SnapsToDevicePixels="True" x:Name="ContentLabel" Content="内容" Foreground="#FF646464" FontFamily="Microsoft YaHei UI Light" Margin="4,8,8,8" HorizontalAlignment="Left" FontSize="20"/>
+                    <TextBlock x:Name="DetailTextBlock" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Margin="20,0,20,10" FontSize="16" Foreground="#CC505050" Visibility="Collapsed" FontFamily="Microsoft YaHei UI Light"/>
+                </StackPanel>
+            </Grid>
+            <Grid Height="40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <control:ButtonEx x:Name="YesButton"  EllipseColor="#FFEBEBEB" EllipseSize="200" Background="#FFFEFEFE" AnimationSpeed="8" CornerRadius="0" TextLine1="" BorderBrush="{x:Null}" Cursor="Hand" MouseOnBackground="WhiteSmoke" BackgroundAnimation="True" BorderThickness="0" MouseDown="YesButton_MouseDown">
+                    <control:ButtonEx.Content>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,0,0,0">
+                            <Ellipse Stroke="#FF32FA32" Width="24" StrokeThickness="5" Height="24"/>
+                            <Label Content="确定" Foreground="#FF505000" FontSize="14"/>
+                        </StackPanel>
+                    </control:ButtonEx.Content>
+                </control:ButtonEx>
+                <control:ButtonEx x:Name="NoButton" EllipseColor="#FFEBEBEB" EllipseSize="200" Background="#FFFEFEFE" AnimationSpeed="8" CornerRadius="0" TextLine1="" BorderBrush="{x:Null}" Grid.Column="2" Cursor="Hand" MouseOnBackground="WhiteSmoke" BackgroundAnimation="True" BorderThickness="0" MouseDown="NoButton_MouseDown">
+                    <control:ButtonEx.Content>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,15,0">
+                            <Grid Width="24" Height="24">
+                                <Border BorderThickness="0" HorizontalAlignment="Center" Height="300" Margin="0,0                 ,0,0" VerticalAlignment="Center" Width="2" RenderTransformOrigin="0.5,0.5" Background="Red">
+                                    <Border.RenderTransform>
+                                        <TransformGroup>
+                                            <RotateTransform Angle="45"/>
+                                        </TransformGroup>
+                                    </Border.RenderTransform>
+                                </Border>
+                                <Border BorderThickness="0" HorizontalAlignment="Center" Height="300" Margin="0" VerticalAlignment="Center" Width="2" RenderTransformOrigin="0.5,0.5" Background="Red">
+                                    <Border.RenderTransform>
+                                        <TransformGroup>
+                                            <RotateTransform Angle="-45"/>
+                                        </TransformGroup>
+                                    </Border.RenderTransform>
+                                </Border>
+                            </Grid>
+                            <Label Content="取消" Foreground="#FF505000" FontSize="14"/>
+                        </StackPanel>
+                    </control:ButtonEx.Content>
+                </control:ButtonEx>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</local:DialogPage>
